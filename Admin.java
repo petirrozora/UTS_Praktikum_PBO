@@ -15,8 +15,7 @@ class Admin extends User {
         availableRooms.add("Standard");
         availableRooms.add("Suite");
     }
-
-    @Override
+    
     public void login(Scanner scanner) {
         System.out.print("Masukkan email: ");
         String inputEmail = scanner.next();
@@ -51,7 +50,6 @@ class Admin extends User {
         }
     }
 
-    // Metode untuk melihat semua pemesanan dari semua customer
     public void viewAllBookings(List<Customer> customers) {
         System.out.println("Laporan Semua Pesanan:");
         for (Customer customer : customers) {
