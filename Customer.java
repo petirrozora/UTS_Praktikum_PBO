@@ -18,7 +18,7 @@ class Customer extends User implements Reservation {
         this.discount = 0.0;
     }
 
-    @Override
+    
     public void bookRoom() {
         if (!roomBooked) {
             Scanner scanner = new Scanner(System.in);
@@ -56,13 +56,10 @@ class Customer extends User implements Reservation {
     }
     
     
-
-    @Override
     public void checkAvailability() {
         System.out.println("Kamar tersedia: Deluxe - Rp 200000, Standard - Rp 150000, Suite - Rp 300000.");
     }
 
-    @Override
     public void viewBookingDetails() {
         if (roomBooked) {
             System.out.println("Detail Pesanan: Kamar " + roomType + " dipesan atas nama " + name);
@@ -73,8 +70,6 @@ class Customer extends User implements Reservation {
         }
     }
     
-
-    @Override
     public void login(Scanner scanner) {
         System.out.print("Masukkan email: ");
         String inputEmail = scanner.next();
@@ -88,7 +83,6 @@ class Customer extends User implements Reservation {
         }
     }
 
-    @Override
     public void makePayment() {
         if (!paymentStatus) {
             System.out.println("Melakukan pembayaran sebesar Rp " + totalAmount);
@@ -100,8 +94,6 @@ class Customer extends User implements Reservation {
         }
     }
 
-
-    @Override
     public void applyDiscount() {
         if (roomBooked && !paymentStatus) {
             discount = 10000; // Diskon dalam Rupiah
